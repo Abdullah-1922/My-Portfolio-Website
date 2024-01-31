@@ -5,7 +5,7 @@ import Container from "../Utils/Container";
 const BannerSection = () => {
   return (
     <Container>
-      {/* <div className="">
+      <div className="">
         <div className="flex lg:min-h-screen  mt-10 lg:mt-1 lg:gap-14 lg:flex-row px-10 lg:px-5 flex-col-reverse items-center">
           <div className="lg:w-3/5 space-y-6">
             
@@ -79,7 +79,7 @@ const BannerSection = () => {
             />
           </div>
         </div>
-      </div> */}
+      </div>
     </Container>
   );
 };
