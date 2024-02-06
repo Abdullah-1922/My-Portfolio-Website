@@ -2,10 +2,10 @@
 
 import { FiSun } from 'react-icons/fi';
 import { MdModeNight } from 'react-icons/md';
-import {  NavLink, useNavigate } from 'react-router-dom';
+import {   useNavigate } from 'react-router-dom';
 import useMode from '../../Hooks/useMode';
 import './Navbar.css';
-
+import Headroom from 'react-headroom';
 
 
 
@@ -15,16 +15,32 @@ const Navbar = () => {
 
   const NavLi = (
     <>
-      <NavLink to={'/'}>
+   
+      <a href='#banner'>
         <li className=' uppercase  text-lg font-bold'>
-          HOME
+          Home
         </li>
-      </NavLink>
-      <NavLink to={'/'}>
+      </a>
+      <a href='#IntroduceSection'>
         <li className=' uppercase  text-lg font-bold'>
-          HOME
+          About
         </li>
-      </NavLink>
+      </a>
+      <a href='#skill'>
+        <li className=' uppercase  text-lg font-bold'>
+          Skills
+        </li>
+      </a>
+      <a href='#project'>
+        <li className=' uppercase  text-lg font-bold'>
+          Projects
+        </li>
+      </a>
+      <a href='#contact'>
+        <li className=' uppercase  text-lg font-bold'>
+          Contact
+        </li>
+      </a>
      
 
    
@@ -33,8 +49,9 @@ const Navbar = () => {
 const navigate =useNavigate()
   const { mode, changeTheme } = useMode();
   return (
-    <div className=' dark:bg-black max-w-[1700px] mx-auto'>
-      <div onScroll={scroll} className=' text-black   '>
+   
+    <Headroom><div className='bg-white  dark:bg-black max-w-[1700px] mx-auto'>
+       <div onScroll={scroll} className=' text-black   '>
         <div className='navbar'>
           <div className='navbar-start'>
       
@@ -81,7 +98,8 @@ const navigate =useNavigate()
           </div>
         </div>
       </div>
-    </div>
+     
+    </div></Headroom>
   );
 };
 

@@ -4,7 +4,7 @@ import Container from '../Utils/Container';
 const IntroduceSection = () => {
   return (
     <Container>
-      <div className='py-10 pt-20 lg:py-1'>
+      <div id='IntroduceSection' className='py-10 pt-20 lg:py-1'>
         <div>
           <h1 className='text-5xl lg:text-7xl font-bold text-gray-300'>
             Introduce
@@ -19,7 +19,7 @@ const IntroduceSection = () => {
             />
           </div>
 
-          <div className='w-full text-center px-4 lg:text-start space-y-4 lg:-mt-24 lg:w-3/5'>
+          <div className='w-full pt-10 text-center px-4 lg:text-start space-y-4 lg:-mt-24 lg:w-3/5'>
             <h4 className='text-3xl text-slate-600 font-bold'>
               Hello, I'm Abdullah Al Kafi
             </h4>
@@ -62,7 +62,7 @@ const IntroduceSection = () => {
               </span>
               
             </div>
-            <p className='text-justify md:text-lg'>
+            <p className='text-justify  dark:text-slate-400  md:text-lg'>
             I am Abdullah Al Kafi, MERN stack web developer with expertise in HTML, CSS, JavaScript, React, Bootstrap, React JS, Firebase, MongoDB, Express JS, and a commitment to delivering high-quality, scalable solutions. Seeking opportunities to apply my technical skills and continuously enhance my proficiency in diverse technologies, contributing to the success of innovative web development projects.
             </p>
             <div>
