@@ -14,7 +14,8 @@ const Root = () => {
   }, []); 
   return (
     <div>
-      
+
+     
         <Navbar/>
       <Outlet/>
     </div>

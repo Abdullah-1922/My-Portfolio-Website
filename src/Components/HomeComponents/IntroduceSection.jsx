@@ -11,13 +11,14 @@ const IntroduceSection = () => {
           </h1>
         </div>
         <div className='flex flex-col items-center lg:flex-row'>
-          <div className='w-full rounded-2xl p-5 md:p-24 lg:p-20 lg:w-2/5'>
+          <div className='w-full rounded-full p-5 md:p-24 lg:p-20 lg:w-2/5'>
             <img
-              className='w-full rounded-2xl h-full object-cover'
-              src='https://i.ibb.co/sbFvwVD/Whats-App-Image-2024-01-31-at-19-20-32-76269aad.jpg'
+              className='w-full rounded-full h-full object-cover'
+              src='https://i.ibb.co/0tymZks/Whats-App-Image-2023-11-19-at-01-02-11-5873c4a5-Photoroom.png'
               alt=''
             />
           </div>
+          {/* https://i.ibb.co/Rc9GLrw/Whats-App-Image-2023-11-19-at-01-02-11-5873c4a5-Photoroom.jpg */}
 
           <div className='w-full pt-10 text-center px-4 lg:text-start space-y-4 lg:-mt-24 lg:w-3/5'>
             <h4 className='text-3xl text-slate-600 font-bold'>

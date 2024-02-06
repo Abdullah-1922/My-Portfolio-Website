@@ -4,6 +4,7 @@ export const ContactInputBox = ({ type, placeholder, name }) => {
     <>
       <div className="mb-6">
         <input
+        required={true}
           type={type}
           placeholder={placeholder}
           name={name}

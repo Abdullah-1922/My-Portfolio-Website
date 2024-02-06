@@ -2,7 +2,7 @@
 import data from '../../assets/ProfileAmination.json';
 import Lottie from 'lottie-react';
 import Container from '../Utils/Container';
-
+import resume from '../../../public/AbdullahAlKafiResume.pdf';
 const BannerSection = () => {
   return (
     <Container>
@@ -60,13 +60,13 @@ const BannerSection = () => {
           </div>
           
           <div className='flex justify-center lg:justify-start gap-5'>
-            <a href="#contact">  <button className='btn dark:text-white font-bold text-lg btn-outline sm:px-8 md:px-10 lg:px-14 '>
+            <a href="#contact">  <button className='btn dark:text-white font-bold text-lg btn-outline px-1 sm:px-8 md:px-10 lg:px-14 '>
               Contact Me
             </button></a>
-          
-            <button className='btn  font-bold text-lg  hover:bg-black bg-black text-white sm:px-8 md:px-10  lg:px-14'>
-              Download CV
-            </button>
+          <a href={resume} download="Abdullah Al Kafi's resume"> <button className='btn  font-bold text-lg  hover:bg-black bg-black text-white px-1   sm:px-8 md:px-10  lg:px-14'>
+              Download Resume
+            </button></a>
+           
           </div>
         </div>
         <div className='lg:w-2/5'>

@@ -1,11 +1,40 @@
 import Container from '../Utils/Container';
 import { ContactInputBox } from './ContactInputBox';
-import './ContactSection.css';
+import emailjs from '@emailjs/browser';
 import { ContactTextArea } from './ContactTextArea';
+import { useRef, useState } from 'react';
+import { toast } from 'react-toastify';
+
 const ContactSection = () => {
+ const form =useRef()
+  const [loading, setLoading] = useState(false);
+  const handleSubmit=(e)=>{
+    setLoading(true)
+   e.preventDefault()
+  // const user_name = e.target.name.value;
+  // const user_email = e.target.email.value;
+  // const message = e.target.message.value;
+  // console.log(user_name,user_email,message);
+  emailjs.sendForm('service_wlrb7o7', 'template_oxthnzr', form.current, 'XhDrS4gkDF_dAvUck')
+      .then((result) => {
+          console.log(result.text);
+          toast.success('Message Sent Successfully')
+      }, (error) => {
+          console.log(error.text);
+      }).finally(()=>setLoading(false))
+      ;
+  console.log(form.current ,'from ref');
+  }
+  
   return (
     <Container>
     < >
+    <div>
+   
+          <h1  className='text-5xl  lg:text-7xl font-bold text-gray-300'>
+            Contact Me
+          </h1>
+        </div>
       <section id='contact' className="relative z-10  overflow-hidden dark:bg-black bg-white py-20 dark:bg-dark lg:py-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap lg:justify-between">
@@ -111,15 +140,16 @@ const ContactSection = () => {
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="relative rounded-lg dark:bg-black bg-white p-8 shadow-lg dark:bg-dark-2 sm:p-12">
-                <form> 
+                <form  ref={form} onSubmit={handleSubmit}> 
                   <ContactInputBox
+                    required={true}
                     type="text"
-                    name="name"
+                    name="from_name"
                     placeholder="Your Name"
                   />
                   <ContactInputBox
-                    type="text"
-                    name="email"
+                    type="email"
+                    name="from_email"
                     placeholder="Your Email"
                   />
                   {/* <ContactInputBox
@@ -128,17 +158,19 @@ const ContactSection = () => {
                     placeholder="Your Phone"
                   /> */}
                   <ContactTextArea
+                   required={true}
                     row="6"
                     placeholder="Your Message"
-                    name="details"
+                    name="message"
                     defaultValue=""
                   />
                   <div>
                     <button
+                    disabled={loading}
                       type="submit"
                       className="w-full rounded border border-primary bg-primary p-3 text-white transition hover:bg-opacity-90"
                     >
-                      Send Message
+                      {loading ? 'Sending...' : 'Send Message'}
                     </button>
                   </div>
                 </form>

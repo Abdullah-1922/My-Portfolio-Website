@@ -19,7 +19,7 @@ const ProjectSection = () => {
             data-aos-duration='800'
             data-aos-easing='ease-in-out'
             data-aos-mirror='true'
-            className=' form-container rounded-[30px] overflow-hidden dark:bg-black  dark:from-black dark:black bg-gradient-to-r from-slate-400 to-gray-200'>
+            className='  rounded-[30px] overflow-hidden dark:bg-black  dark:from-black dark:black bg-gradient-to-r from-slate-400 to-gray-200'>
             <div className='mx-auto max-w-[1300px] px-4 py-4 sm:px-4 sm:py-5  lg:py-8'>
               <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16'>
                 <div className='relative  h-72 overflow-hidden rounded-lg sm:h-96 lg:order-last lg:h-full'>
@@ -140,7 +140,7 @@ const ProjectSection = () => {
             data-aos-duration='800'
             data-aos-easing='ease-in-out'
             data-aos-mirror='true'
-            className=' text-black form-container rounded-[30px] overflow-hidden dark:bg-black  dark:from-black dark:black bg-gradient-to-r from-slate-400 to-gray-200'>
+            className=' text-black  rounded-[30px] overflow-hidden dark:bg-black  dark:from-black dark:black bg-gradient-to-r from-slate-400 to-gray-200'>
             <div className='mx-auto max-w-[1300px] px-4 py-4 sm:px-4 sm:py-5  lg:py-8'>
               <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16'>
                 <div className='relative  h-72 overflow-hidden rounded-lg sm:h-96 lg:order-last lg:h-full'>

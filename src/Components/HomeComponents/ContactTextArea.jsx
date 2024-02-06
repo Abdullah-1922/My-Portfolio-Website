@@ -4,6 +4,7 @@ export const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
     <>
       <div className="mb-6">
         <textarea
+           required={true}
           rows={row}
           placeholder={placeholder}
           name={name}
