@@ -32,8 +32,4 @@
     animation: gradientBorder 5s linear infinite;
   }
   
-  /* Dark mode style for text color */
-  .dark-mode .form-container {
-    color: var(--text-dark);
-  }
   
